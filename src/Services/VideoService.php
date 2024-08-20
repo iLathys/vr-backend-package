@@ -16,9 +16,9 @@ class VideoService
 {
 
     protected $httpClientService;
-    public function __construct(HttpClientService $httpClientService)
+    public function __construct()
     {
-        $this->httpClientService = $httpClientService;
+        $this->httpClientService = new HttpClientService();
     }
 
     public function expressMode($request)
