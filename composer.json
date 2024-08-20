@@ -16,13 +16,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VeerollPackage\\": "src/"
+              "Vendor\\Veeroll\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VeerollPackage\\VeerollServiceProvider"
+                  "Vendor\\Veeroll\\VeerollServiceProvider"
             ]
         }
     },
