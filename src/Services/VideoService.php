@@ -21,10 +21,10 @@ class VideoService
         $this->httpClientService = new HttpClientService();
     }
 
-    public function expressMode($request)
+    public function expressMode($params)
     {
         $data = [
-            'json' => $request->all(),
+            'json' => $params,
             'headers' => [
                 'secret' => env('VEEROLL_SECRET', ''),
                 'api_key' => env('VEEROLL_API_KEY', ''),
@@ -34,10 +34,10 @@ class VideoService
         return $this->httpClientService->makeRequest('POST', 'video-express-mode', $data);
     }
 
-    public function stepByStep($request)
+    public function stepByStep($params)
     {
         $data = [
-            'json' => $request->all(),
+            'json' => $params,
             'headers' => [
                 'secret' => env('VEEROLL_SECRET', ''),
                 'api_key' => env('VEEROLL_API_KEY', ''),
