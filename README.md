@@ -20,7 +20,8 @@ After installing the package, add the VeerollServiceProvider to the providers ar
 ```
 ## run the command below
 ```
-php artisan vendor:publish --provider="Veeroll\VeerollServiceProvider"
+php artisan vendor:publish --provider="Vendor\Veeroll\VeerollServiceProvider"
+
 ```
 
 ##  Usage
