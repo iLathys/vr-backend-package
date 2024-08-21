@@ -1,4 +1,9 @@
-return [
-    'secret' => env('VEEROLL_SECRET', ''),
-    'api_key' => env('VEEROLL_API_KEY', ''),
-];
+
+<?php
+
+use Illuminate\Support\Str;
+
+    return [
+        'secret' => env('VEEROLL_SECRET', ''),
+        'api_key' => env('VEEROLL_API_KEY', ''),
+    ];
