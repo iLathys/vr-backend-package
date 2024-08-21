@@ -8,15 +8,16 @@ To install the package, run the following command:
 
 ```bash
 composer require veeroll-package/composer
+```
 
-
-Configuration
+## Configuration
 After installing the package, add the VeerollServiceProvider to the providers array in config/app.php:
 
+```
 'providers' => ServiceProvider::defaultProviders()->merge([
     Veeroll\VeerollServiceProvider::class,
 ])->toArray(),
-
+```
 
 
 ##  Usage
@@ -45,6 +46,7 @@ $params = [
 $veerollpackage = new VideoService();
 $veerollpackage->expressMode($params);
 
+```
 
 ## Environment Variables
 Make sure to set the following environment variables in your .env file:
@@ -52,3 +54,4 @@ Make sure to set the following environment variables in your .env file:
 ```
 VEEROLL_SECRET=your-secret-value
 VEEROLL_API_KEY=your-api-key
+```
