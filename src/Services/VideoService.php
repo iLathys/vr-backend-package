@@ -26,8 +26,8 @@ class VideoService
         $data = [
             'json' => $params,
             'headers' => [
-                'secret' => config('veeroll.secret'),
-                'api_key' => config('veeroll.api_key'),
+                'api-secret' => config('veeroll.secret'),
+                'api-key' => config('veeroll.api_key'),
             ],
         ];
 
