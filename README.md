@@ -18,7 +18,10 @@ After installing the package, add the VeerollServiceProvider to the providers ar
     Veeroll\VeerollServiceProvider::class,
 ])->toArray(),
 ```
-
+## run the command below
+```
+php artisan vendor:publish --provider="Veeroll\VeerollServiceProvider"
+```
 
 ##  Usage
 Express Mode - Create Veeroll Video

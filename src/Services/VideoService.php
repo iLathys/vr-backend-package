@@ -26,8 +26,8 @@ class VideoService
         $data = [
             'json' => $params,
             'headers' => [
-                'secret' => env('VEEROLL_SECRET', ''),
-                'api_key' => env('VEEROLL_API_KEY', ''),
+                'secret' => config('veeroll.secret'),
+                'api_key' => config('veeroll.api_key'),
             ],
         ];
 
@@ -39,8 +39,8 @@ class VideoService
         $data = [
             'json' => $params,
             'headers' => [
-                'secret' => env('VEEROLL_SECRET', ''),
-                'api_key' => env('VEEROLL_API_KEY', ''),
+                'secret' => config('veeroll.secret'),
+                'api_key' => config('veeroll.api_key'),
             ],
         ];
 

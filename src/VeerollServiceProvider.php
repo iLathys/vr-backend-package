@@ -16,6 +16,8 @@ class VeerollServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        // Register other resources like routes, views, etc.
+        $this->publishes([
+            __DIR__.'/../config/veeroll.php' => config_path('veeroll.php'),
+        ]);
     }
 }
