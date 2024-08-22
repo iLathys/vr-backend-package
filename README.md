@@ -387,6 +387,32 @@ $veerollpackage->createVideo($params);
 
 ``` 
 
+## Below is an example of how to update a Veeroll video:
+
+```
+use Vendor\Veeroll\Services\VideoService;
+
+$params = [
+    "picture_format_id" => 2,
+    "duration" => 15, //min of 10 maximum 180(3 minutes) 
+    "language_id" => 1,
+    "voice_over" => 0, // true or false 
+    "captions" => 1, // true or false
+    "video_type_id" => 7,
+    "video_tone_id" => 3,
+    "name" => "test", 
+    "topic" => "city lights", // topic of the video that will be used by the AI to generate contents
+    "asset_type" => "express_mode", // express_mode => generate AI Images , stock_pictures => generate stock images , plain => solid backgrounds , stock_videos => generate stock videos
+    "tone_id" => 1,
+    "ai_style_id" => 8,
+    "voice" => 1 // true or false
+];
+
+$videoId = 2;
+$veerollpackage = new VideoService();
+$veerollpackage->updateVideo($params,$videoId);
+
+```
 
 
 ## Below is an example of how to generate a video once all your voice overs or images are generated,
