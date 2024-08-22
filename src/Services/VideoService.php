@@ -34,6 +34,23 @@ class VideoService
 
         return $this->httpClientService->makeRequest('POST', 'video-express-mode', $data);
     }
+    public function updateVideo($params,$id)
+    {
+        $data = [ 
+            'json' => $params,
+            'headers' => [
+                'api-secret' => config('veeroll.secret'),
+                'api-key' => config('veeroll.api_key'),
+            ],
+        ];
+
+        return $this->httpClientService->makeRequest('PUT', "video/$id", $data);
+    }
+
+    public function generateVideo($id)
+    {
+        return $this->httpClientService->makeRequest('GET', "video/$id");
+    }
 
     // public function stepByStep($params)
     // {

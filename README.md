@@ -26,7 +26,9 @@ php artisan vendor:publish --provider="Vendor\Veeroll\VeerollServiceProvider"
 
 ##  Usage
 Below is an example of how to create a Veeroll video:
-
+( note that it will take some time before your images and voice overs will be generated, )
+you can always check on key `frames` and `generating_vo` key if voice over is still on process 
+and key `generating_ai_image` for images on process for ai generation 
 ```
 use Vendor\Veeroll\Services\VideoService;
 
@@ -40,7 +42,7 @@ $params = [
     "video_tone_id" => 3,
     "name" => "test", 
     "topic" => "city lights", // topic of the video that will be used by the AI to generate contents
-    "asset_type" => "express_mode",
+    "asset_type" => "express_mode", // express_mode => generate AI Images , stock_pictures => generate stock images , plain => solid backgrounds , stock_videos => generate stock videos
     "tone_id" => 1,
     "ai_style_id" => 8,
     "voice" => 1 // true or false
@@ -384,10 +386,29 @@ $veerollpackage->createVideo($params);
 ]
 
 ``` 
-## your visuals and script will be on key `frames`
+
+
+
+## Below is an example of how to generate a video once all your voice overs or images are generated,
+you can always check on the key `exports` if the video is done being generated and your generated history of videos
+
+```
+use Vendor\Veeroll\Services\VideoService;
+
+
+$veerollpackage = new VideoService();
+$videoId = 2;
+$veerollpackage->generateVideo($videoId);
+
+```
+
+## your visuals and script will be on key `frames` on the response data (sample images on veeroll website)
 
 ![Screenshot](./images/image_1.png)
 ![Screenshot](./images/image_2.png)
+
+
+
 
 ## available picture_format_ids
 ```
