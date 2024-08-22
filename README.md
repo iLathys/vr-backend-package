@@ -53,18 +53,17 @@ $veerollpackage->expressMode($params);
 ```
 
 ## available picture_format_ids
+```
+ID  Label           aspect Ration   Width   Height
 
-ID  Label              Aspect Ratio  Width  Height
-
-1   Square (1:1)       1:1           1024   1024
-2   Vertical (9:16)    9:16          768    1344
-3   Wide (16:9)        16:9          1344   768
-
-
+1	Square (1:1)	1:1	            1024	1024
+2	Vertical (9:16)	9:16	        768	    1344
+3	Wide (16:9)	    16:9	        1344	768
+```
 
 ## available language_id
 
-
+```
 ID  Label       Language
 
 1	English	    English US
@@ -79,7 +78,7 @@ ID  Label       Language
 10	Mandarin	Mandarin
 11	Filipino	Filipino
 12	Latin edit	Latin
-
+```
 
 ## available video_type_id
 
@@ -119,7 +118,7 @@ ID label            tone
 ID label                style           description
 
 1	Pencil sketch	    line-art	    black and white hand drawn pencil sketch
-2	Comic Book	        comic-book	    Colored comic book style drawing
+2	Comic Book          comic-book	    Colored comic book style drawing
 3	Anime	            anime	        coloured anime style drawing
 4	2D isometric	    isometric	    2D isometric style
 5	Photo realistic	    photographic	photo realistic picture
@@ -139,8 +138,7 @@ ID label                style           description
 
 ## available tone_id ( music_tones)
 ```
-ID Label
-
+ID  Label
 1	Carefree
 2	Epic
 3	Exciting
