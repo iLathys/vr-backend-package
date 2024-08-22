@@ -64,20 +64,21 @@ ID  Label              Aspect Ratio  Width  Height
 ## available language_id
 
 ```
-ID  Label       Language
+ID  Label               Language
 
-1	English	    English US
-2	English UK	English UK
-3	Portuguese	Portuguese
-4	Spanish	    Spanish
-5	French	    French
-6	German  	German
-7	Italian	    Italian
-8	Dutch	    Dutch
-9	Bahasa Indonesia	Bahasa Indonesia
-10	Mandarin	Mandarin
-11	Filipino	Filipino
-12	Latin edit	Latin
+1   English             English US
+2   English UK          English UK
+3   Portuguese          Portuguese
+4   Spanish             Spanish
+5   French              French
+6   German              German
+7   Italian             Italian
+8   Dutch               Dutch
+9   Bahasa Indonesia    Bahasa Indonesia
+10  Mandarin            Mandarin
+11  Filipino            Filipino
+12  Latin edit          Latin
+
 ```
 
 ## available video_type_id
