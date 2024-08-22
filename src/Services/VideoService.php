@@ -21,9 +21,10 @@ class VideoService
         $this->httpClientService = new HttpClientService();
     }
 
-    public function expressMode($params)
+    // this is the express mode
+    public function createVideo($params)
     {
-        $data = [
+        $data = [ 
             'json' => $params,
             'headers' => [
                 'api-secret' => config('veeroll.secret'),
@@ -34,16 +35,16 @@ class VideoService
         return $this->httpClientService->makeRequest('POST', 'video-express-mode', $data);
     }
 
-    public function stepByStep($params)
-    {
-        $data = [
-            'json' => $params,
-            'headers' => [
-                'secret' => config('veeroll.secret'),
-                'api_key' => config('veeroll.api_key'),
-            ],
-        ];
+    // public function stepByStep($params)
+    // {
+    //     $data = [
+    //         'json' => $params,
+    //         'headers' => [
+    //             'secret' => config('veeroll.secret'),
+    //             'api_key' => config('veeroll.api_key'),
+    //         ],
+    //     ];
 
-        return $this->httpClientService->makeRequest('POST', 'video', $data);
-    }
+    //     return $this->httpClientService->makeRequest('POST', 'video', $data);
+    // }
 }
