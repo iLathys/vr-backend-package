@@ -48,7 +48,7 @@ $params = [
 ];
 
 $veerollpackage = new VideoService();
-$veerollpackage->expressMode($params);
+$veerollpackage->createVideo($params);
 
 ```
 
