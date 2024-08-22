@@ -53,13 +53,14 @@ $veerollpackage->expressMode($params);
 ```
 
 ## available picture_format_ids
-`
+
+<details>
 ID  Label           aspect Ration   Width   Height
 
 1	Square (1:1)	1:1	            1024	1024
 2	Vertical (9:16)	9:16	        768	    1344
 3	Wide (16:9)	    16:9	        1344	768
-`
+</details>
 
 ## available language_id
 
