@@ -385,8 +385,9 @@ $veerollpackage->createVideo($params);
 
 ``` 
 ## your visuals and script will be on key `frames`
-    ![Screenshot](./images/image_1.png)
-    ![Screenshot](./images/image_2.png)
+
+![Screenshot](./images/image_1.png)
+![Screenshot](./images/image_2.png)
 
 ## available picture_format_ids
 ```
