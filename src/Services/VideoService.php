@@ -47,7 +47,7 @@ class VideoService
         return $this->httpClientService->makeRequest('PUT', "video/$id", $data);
     }
 
-    public function generateVideo($id)
+    public function getVideo($id)
     {
         $data = [ 
             'json' => [],
@@ -57,6 +57,18 @@ class VideoService
             ],
         ];
         return $this->httpClientService->makeRequest('GET', "video/$id",$data);
+    }
+
+    public function generateVideo($id)
+    {
+        $data = [ 
+            'json' => [],
+            'headers' => [
+                'api-secret' => config('veeroll.secret'),
+                'api-key' => config('veeroll.api_key'),
+            ],
+        ];
+        return $this->httpClientService->makeRequest('GET', "videos/generate-video/$id",$data);
     }
 
     // public function stepByStep($params)
