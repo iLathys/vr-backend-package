@@ -86,70 +86,75 @@ ID  Label               Language
 ```
 ID  Label
 
-1	Fun facts
-2	Listicle
-3	Tips
-4	Education
-5	Short-story
-6	Motivation
+1   Fun facts
+2   Listicle
+3   Tips
+4   Education
+5   Short-story
+6   Motivation
 7   Default
+
 ```
 
 ## available video_tone_id
 
 ```
-ID label            tone
+ID  Label            Tone
 
-1	Corporate	    The video style is corporate.
-2	Marketing	    The video purpose is a for marketing
-3	Casual	        The video tone should be casual
-4	Energetic	    The video tone should be energetic
-5	Educational	    The video style is educational
-6	Intriguing	    The video tone should be intriguing
-7	Humorous	    The video tone should be humorous
-8	Serious	        The video tone should be serious
-9	Inspirational	The video should be inspirational
-10	Motivational	The video style should be motivational
-11	Dramatic	    The video style should be dramatic
-12	Joyful	        The video tone should be joyful
+1   Corporate        The video style is corporate.
+2   Marketing        The video purpose is for marketing.
+3   Casual           The video tone should be casual.
+4   Energetic        The video tone should be energetic.
+5   Educational      The video style is educational.
+6   Intriguing       The video tone should be intriguing.
+7   Humorous         The video tone should be humorous.
+8   Serious          The video tone should be serious.
+9   Inspirational    The video should be inspirational.
+10  Motivational     The video style should be motivational.
+11  Dramatic         The video style should be dramatic.
+12  Joyful           The video tone should be joyful.
+
 ```
 
 ## available ai_style_id , this is for the visuals ( images / videos)
 ```
-ID label                style           description
+ID  Label               Style           Description
 
-1	Pencil sketch	    line-art	    black and white hand drawn pencil sketch
-2	Comic Book          comic-book	    Colored comic book style drawing
-3	Anime	            anime	        coloured anime style drawing
-4	2D isometric	    isometric	    2D isometric style
-5	Photo realistic	    photographic	photo realistic picture
-6	Origami	            origami	        Origami style drawing
-7	Pixel art	        pixel-art	    Pixel art style drawing
-8	Movie style	        cinematic	    movie style picture
-9	Colour marker	    digital-art	    Colour marker style sketch
-10	Neon	            neon-punk	    neon style drawing
-11	3D model	        3d-model	    3D render picture
-12	Sepia	            line-art	    sepia hand drawn pencil sketch
-13	Watercolor	        line-art	    watercolor drawing
-14	Fantasy	            digital-art	    Fantasy drawing
-15	Polygon	            digital-art	    Polygon style drawing
-16	2D Flat	            enhance	        2D explainer video-style picture (flat:0.9, minimal:0.9, simple shapes:0.9)
+1   Pencil sketch       Line-art        Black and white hand-drawn pencil sketch
+2   Comic Book          Comic-book      Colored comic book style drawing
+3   Anime               Anime           Colored anime style drawing
+4   2D isometric        Isometric       2D isometric style
+5   Photo realistic     Photographic    Photo realistic picture
+6   Origami             Origami         Origami style drawing
+7   Pixel art           Pixel-art       Pixel art style drawing
+8   Movie style         Cinematic       Movie style picture
+9   Colour marker       Digital-art     Colour marker style sketch
+10  Neon                Neon-punk       Neon style drawing
+11  3D model            3D-model        3D render picture
+12  Sepia               Line-art        Sepia hand-drawn pencil sketch
+13  Watercolor          Line-art        Watercolor drawing
+14  Fantasy             Digital-art     Fantasy drawing
+15  Polygon             Digital-art     Polygon style drawing
+16  2D Flat             Enhance         2D explainer video-style picture (flat:0.9, minimal:0.9, simple shapes:0.9)
+
 
 ```
 
 ## available tone_id ( music_tones)
 ```
 ID  Label
-1	Carefree
-2	Epic
-3	Exciting
-4	Funny
-5	Groovy
-6	Happy
-7	Love
-8	Mysterious
-9	Peaceful
-10	Uplifting
+
+1   Carefree
+2   Epic
+3   Exciting
+4   Funny
+5   Groovy
+6   Happy
+7   Love
+8   Mysterious
+9   Peaceful
+10  Uplifting
+
 
 ```
 
