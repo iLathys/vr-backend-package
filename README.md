@@ -26,7 +26,7 @@ php artisan vendor:publish --provider="Vendor\Veeroll\VeerollServiceProvider"
 
 ##  Usage
 Express Mode - Create Veeroll Video
-Below is an example of how to use the expressMode method to create a Veeroll video:
+Below is an example of how to create a Veeroll video:
 
 ```
 use Vendor\Veeroll\Services\VideoService;
