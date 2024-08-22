@@ -415,8 +415,21 @@ $veerollpackage->updateVideo($params,$videoId);
 ```
 
 
+## how to fetch details of created video
+
+```
+use Vendor\Veeroll\Services\VideoService;
+
+
+$veerollpackage = new VideoService();
+$videoId = 2;
+$veerollpackage->getVideo($videoId);
+
+```
+
+
 ## Below is an example of how to generate a video once all your voice overs or images are generated,
-you can always check on the key `exports` if the video is done being generated and your generated history of videos
+you can always check on the key `exports` if the video is done being generated and your generated history of videos, you can always check the `status` key if its finished
 
 ```
 use Vendor\Veeroll\Services\VideoService;
