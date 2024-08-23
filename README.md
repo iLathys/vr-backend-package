@@ -554,6 +554,18 @@ ID  Label
 
 
 ```
+## Note: when you have updated your `topic` you need to update your `frames` content,  to do that 
+
+```
+use Vendor\Veeroll\Services\VideoService;
+
+
+$veerollpackage = new VideoService();
+$videoId = 2;
+$veerollpackage->generateAIcontent($videoId);
+
+```
+
 
 ## Environment Variables
 Make sure to set the following environment variables in your .env file:

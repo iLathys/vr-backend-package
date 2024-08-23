@@ -71,16 +71,16 @@ class VideoService
         return $this->httpClientService->makeRequest('GET', "videos/generate-video/$id",$data);
     }
 
-    // public function stepByStep($params)
-    // {
-    //     $data = [
-    //         'json' => $params,
-    //         'headers' => [
-    //             'secret' => config('veeroll.secret'),
-    //             'api_key' => config('veeroll.api_key'),
-    //         ],
-    //     ];
+    public function generateAIcontent($params)
+    {
+        $data = [
+            'json' => $[],
+            'headers' => [
+                'secret' => config('veeroll.secret'),
+                'api_key' => config('veeroll.api_key'),
+            ],
+        ];
 
-    //     return $this->httpClientService->makeRequest('POST', 'video', $data);
-    // }
+        return $this->httpClientService->makeRequest('POST', "videos/generate-ai-content/$id",$data);
+    }
 }
