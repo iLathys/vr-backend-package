@@ -21,8 +21,8 @@ class HttpClientService
     public function __construct()
     {
         $this->client = new Client([
-            'base_uri' => 'http://vr-backend.test/api/sdk/v1/', // Your original project base URL
-            // 'base_uri' => 'https://api.veeroll.com/api/sdi/v1/', // Your original project base URL
+            // 'base_uri' => 'http://vr-backend.test/api/sdk/v1/', // Your original project base URL
+            'base_uri' => 'https://api.veeroll.com/api/sdk/v1/', // Your original project base URL
             'timeout'  => 10.0,
         ]);
     }
