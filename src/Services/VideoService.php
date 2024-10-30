@@ -24,7 +24,7 @@ class VideoService
     // this is the express mode
     public function createVideo($params)
     {
-        $data = [ 
+        $data = [
             'json' => $params,
             'headers' => [
                 'api-secret' => config('veeroll.secret'),
@@ -32,55 +32,94 @@ class VideoService
             ],
         ];
 
-        return $this->httpClientService->makeRequest('POST', 'video-express-mode', $data);
-    }
-    public function updateVideo($params,$id)
-    {
-        $data = [ 
-            'json' => $params,
-            'headers' => [
-                'api-secret' => config('veeroll.secret'),
-                'api-key' => config('veeroll.api_key'),
-            ],
-        ];
+        // return $this->httpClientService->makeRequest('POST', 'video-express-mode', $data);
+        $response = $this->httpClientService->makeRequest('POST', 'video-express-mode', $data);
 
-        return $this->httpClientService->makeRequest('PUT', "video/$id", $data);
+        $videoId = $response['data']['id'] ?? null;
+        $message = $response['message'] ?? 'No message available';
+
+        return [
+            'video_id' => $videoId,
+            'message' => $message,
+        ];
     }
 
-    public function getVideo($id)
-    {
-        $data = [ 
-            'json' => [],
-            'headers' => [
-                'api-secret' => config('veeroll.secret'),
-                'api-key' => config('veeroll.api_key'),
-            ],
-        ];
-        return $this->httpClientService->makeRequest('GET', "video/$id",$data);
-    }
 
     public function generateVideo($id)
     {
-        $data = [ 
+        $data = [
             'json' => [],
             'headers' => [
                 'api-secret' => config('veeroll.secret'),
                 'api-key' => config('veeroll.api_key'),
             ],
         ];
-        return $this->httpClientService->makeRequest('GET', "videos/generate-video/$id",$data);
+        return $this->httpClientService->makeRequest('GET', "videos/generate-video/$id", $data);
     }
 
-    public function generateAIcontent($params)
+    public function getCredits()
     {
         $data = [
-            'json' => $[],
+            'json' => [],
             'headers' => [
-                'secret' => config('veeroll.secret'),
-                'api_key' => config('veeroll.api_key'),
+                'api-secret' => config('veeroll.secret'),
+                'api-key' => config('veeroll.api_key'),
             ],
         ];
-
-        return $this->httpClientService->makeRequest('POST', "videos/generate-ai-content/$id",$data);
+        return $this->httpClientService->makeRequest('GET', "credits", $data);
     }
+
+    public function getVideoURLs($id)
+    {
+        $data = [
+            'json' => [],
+            'headers' => [
+                'api-secret' => config('veeroll.secret'),
+                'api-key' => config('veeroll.api_key'),
+            ],
+        ];
+        return $this->httpClientService->makeRequest('GET', "video-download-urls/$id", $data);
+    }
+
+
+
+    // public function updateVideo($params,$id)
+    // {
+    //     $data = [ 
+    //         'json' => $params,
+    //         'headers' => [
+    //             'api-secret' => config('veeroll.secret'),
+    //             'api-key' => config('veeroll.api_key'),
+    //         ],
+    //     ];
+
+    //     return $this->httpClientService->makeRequest('PUT', "video/$id", $data);
+    // }
+
+    // public function getVideo($id)
+    // {
+    //     $data = [
+    //         'json' => [],
+    //         'headers' => [
+    //             'api-secret' => config('veeroll.secret'),
+    //             'api-key' => config('veeroll.api_key'),
+    //         ],
+    //     ];
+    //     return $this->httpClientService->makeRequest('GET', "video/$id", $data);
+    // }
+
+
+
+    // public function generateAIcontent($params)
+    // {
+    //     $data = [
+    //         'json' => $[],
+    //         'headers' => [
+    //             'secret' => config('veeroll.secret'),
+    //             'api_key' => config('veeroll.api_key'),
+    //         ],
+    //     ];
+
+    //     return $this->httpClientService->makeRequest('POST', "videos/generate-ai-content/$id",$data);
+    // }
 }
