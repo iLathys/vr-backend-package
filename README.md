@@ -110,7 +110,7 @@ $videoId = 2;
 $veerollpackage->getVideoURLs($videoId);
 
 ```
-a sample request will be like this, TAKE NOTE of the status field, it its equal to 0 or false, it means its still on going on the process of generating, with status equal to 1 is finish 
+## a sample reponse will be like this, TAKE NOTE of the status field, if its equal to 0 or false, it means its still on going on the process of generating, with status equal to 1 is finish 
 
 ```
 [
