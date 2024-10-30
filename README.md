@@ -100,6 +100,37 @@ $veerollpackage->generateVideo($videoId);
 
 ```
 
+## To get the generated video urls and download it , you can call on this api to monitor the status of the generation of video
+```
+use Vendor\Veeroll\Services\VideoService;
+
+
+$veerollpackage = new VideoService();
+$videoId = 2;
+$veerollpackage->getVideoURLs($videoId);
+
+```
+a sample request will be like this, TAKE NOTE of the status field, it its equal to 0 or false, it means its still on going on the process of generating, with status equal to 1 is finish 
+
+```
+[
+  "video_export" =>[
+    [
+      'video_id' => 2,
+      'status' => 1, 
+      'download_url' => 'https://s3.us-west-2.amazonaws.com/sample.mp4',
+      'actual_duration' => 21,
+      'date_generated' => "2024-09-26 13:10:01"
+      'created_at' => "2024-09-26T05:10:01.000000Z"
+      'updated_at' => "2024-09-26T05:13:23.000000Z"
+    ]
+  ]
+]
+
+```
+
+
+
 ## available picture_format_ids
 ```
 ID  Label              Aspect Ratio  Width  Height
